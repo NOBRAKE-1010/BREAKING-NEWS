@@ -5,42 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Talk Poll page -2024 YEAH</title>
     <style>
+        /* 전체 페이지에 적용될 스타일 */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 15px;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center;     /* 수직 중앙 정렬 */
+            height: 100vh;           /* 화면 높이 100%로 설정 */
+            background-color: #f4f4f9; /* 부드러운 배경 색상 */
         }
+
+        /* 이미지와 선택지를 담는 컨테이너 */
         .survey-options {
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* 세로로 쌓이도록 설정 */
+            align-items: center;    /* 가운데 정렬 */
+            gap: 15px;              /* 이미지들 간 간격 */
         }
+
+        /* 선택지 링크 스타일 */
         .survey-option {
-            margin: 10px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 10px;
             text-decoration: none;
             color: #333;
-            display: inline-block;
-            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+            transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .survey-option:hover {
-            background-color: #ddd;
+            transform: scale(1.05); /* 호버 시 크기 증가 */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 효과 */
         }
+
+        /* 이미지 크기 및 정렬 */
+        .survey-option img {
+            width: 280px;
+            height: 100px;
+            object-fit: cover; /* 이미지 비율 유지 */
+            border-radius: 10px;
+        }
+
+        /* 제목 스타일 */
+        h1 img {
+            width: 380px;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
-    <h1><img src="./top.jpg" width="380", height="90"><h1>
+    <!-- 제목과 이미지 -->
+    <h1><img src="./top.jpg" alt="Tech Talk Poll"></h1>
+    
+    <!-- 설문조사 선택지 -->
     <div class="survey-options">
-        <a href="https://link1.com" class="survey-option"><img src="./hyeongrak-kim_all.jpg" width="280", height="100"></a>
-	<br>
-        <a href="https://link1.com" class="survey-option"><img src="./yeonjae-park_all.jpg" width="280", height="100"></a>
-	<br>
-        <a href="https://link1.com" class="survey-option"><img src="./seungjae-lee_all.jpg" width="280", height="100"></a>
-	<br>
-        <a href="https://link1.com" class="survey-option"><img src="./donghyun-jim_all.jpg" width="280", height="100"></a>
-	<br>
-        <a href="https://link1.com" class="survey-option"><img src="./taekwon-yuk_all.jpg" width="280", height="100"></a>
+        <a href="https://link1.com" class="survey-option">
+            <img src="./hyeongrak-kim_all.jpg" alt="Hyeongrak Kim">
+        </a>
+        <a href="https://link1.com" class="survey-option">
+            <img src="./yeonjae-park_all.jpg" alt="Yeonjae Park">
+        </a>
+        <a href="https://link1.com" class="survey-option">
+            <img src="./seungjae-lee_all.jpg" alt="Seungjae Lee">
+        </a>
+        <a href="https://link1.com" class="survey-option">
+            <img src="./donghyun-jim_all.jpg" alt="Donghyun Jim">
+        </a>
+        <a href="https://link1.com" class="survey-option">
+            <img src="./taekwon-yuk_all.jpg" alt="Taekwon Yuk">
+        </a>
     </div>
 </body>
 </html>
